@@ -9,7 +9,8 @@ use weather_in::{request_current_weather, Cli};
 
 fn main() {
     let cli = Cli::parse();
-    let current_weather = request_current_weather(&cli.location, &cli.isocountry, &cli.api_key).unwrap();
+    let current_weather =
+        request_current_weather(&cli.location, &cli.isocountry, &cli.api_key).unwrap();
 
     current_weather.print();
 }

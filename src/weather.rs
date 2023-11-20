@@ -147,14 +147,10 @@ Sunset: {}
 
         let message = match &self.rain {
             Some(rain) => {
-                let message = message + &format!("Rain:\n    1 hour: {}", rain.one_hour);
+                let mut message = message + &format!("Rain:\n    1 hour: {}", rain.one_hour);
 
-                let message = match rain.three_hours {
-                    Some(three_hours) => {
-                        let message = message + &format!("\n    3 hours: {}", three_hours);
-
-                        message
-                    }
+                message = match rain.three_hours {
+                    Some(three_hours) => message + &format!("\n    3 hours: {}", three_hours),
                     None => message,
                 };
 
@@ -165,14 +161,10 @@ Sunset: {}
 
         let message = match &self.snow {
             Some(snow) => {
-                let message = message + &format!("Snow:\n    1 hour: {}", snow.one_hour);
+                let mut message = message + &format!("Snow:\n    1 hour: {}", snow.one_hour);
 
-                let message = match snow.three_hours {
-                    Some(three_hours) => {
-                        let message = message + &format!("\n    3 hours: {}", three_hours);
-
-                        message
-                    }
+                message = match snow.three_hours {
+                    Some(three_hours) => message + &format!("\n    3 hours: {}", three_hours),
                     None => message,
                 };
 
