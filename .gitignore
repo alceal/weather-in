@@ -12,6 +12,10 @@
 # Dev container
 .devcontainer/
 
+# Environment variables
+.env
+
+# MacOS
 # General
 .DS_Store
 .AppleDouble
