@@ -1,26 +1,37 @@
 # Weather-in CLI Tool
 
-## Overview
+## Introduction
 
-The Weather-in CLI Tool is a command-line application for retrieving and displaying current weather information based on user-specified locations. It utilizes the OpenWeatherMap API to fetch real-time weather data and provides a simple and convenient way to check the weather from the terminal.
+The Weather-in CLI Tool serves as a demonstration of making API requests using Rust. This project showcases my proficiency in Rust development by implementing a command-line application that fetches real-time weather data from the OpenWeatherMap API and presents it conveniently in the terminal.
 
-## Features
+## Dependencies
 
-- **Command-Line Interface:** Easily accessible from the command line with support for various options and arguments.
-- **Location Specific:** Retrieve weather information for a specific location and, optionally, an ISO country code for more accurate results.
-- **API Integration:** Utilizes the OpenWeatherMap API to fetch current weather data.
+This project leverages several crates from crates.io to achieve its functionality:
+
+- clap: For parsing command-line arguments in a structured manner.
+- reqwest: To perform HTTP requests and interact with APIs.
+- serde: For serializing and deserializing JSON data.
+- chrono: Utilized for date and time operations.
 
 ## Installation
 
-To use the Weather CLI Tool, follow these steps:
+To use the Weather-in CLI Tool, follow these simple installation steps:
 
 ```bash
-git clone https://github.com/alceal/weather-in.git
+git clone <https://github.com/alceal/weather-in.git>
 cd weather-in
 cargo build --release
 ```
 
-## Usage
+Alternatively, you can install the tool directly using Cargo:
+
+```bash
+cargo install weather-in
+```
+
+# Usage
+
+The Weather-in CLI Tool is designed to retrieve current weather information based on user-provided locations and API keys. Here's an example of how to use it:
 
 ```bash
 weather-in <LOCATION> [--isocountry <COUNTRY_CODE>] --api-key <API_KEY>
@@ -36,10 +47,6 @@ Example:
 weather-in "New York" --isocountry US --api-key YOUR_API_KEY
 ```
 
-## Contributing
-
-If you find issues or have suggestions for improvements, feel free to open an issue or create a pull request. Contributions are welcome!
-
-## License
+# License
 
 This project is licensed under the MIT License.
